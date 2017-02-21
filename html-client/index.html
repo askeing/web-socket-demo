@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Socket HTML Cleint</title>
+    <script type="application/javascript" src="js/client.js"></script>
+</head>
+<body>
+    <h1>Web Socket HTML Cleint</h1>
+    <hr>
+    <input id="wsserver" style="font-size: small;" value="ws://localhost:8888/"></input>
+    <button onclick="init_ws(); return false;">connect</button>
+    <button onclick="on_click_close_btn(); return false;">close</button>
+    <br>
+    <br>
+    <form onsubmit="on_submit(); return false;">
+        <input type="text" id="input">
+        <input type="submit" value="Send">
+    </form>
+    <br>
+    <div id="console"></div>
+    <strong>Log:</strong>
+    <div id="log" style="border: solid 1px; padding: 5px; width: 500px; height: 300px; overflow-y: scroll; font-size: small;"></div>
+</body>
+</html>
