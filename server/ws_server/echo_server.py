@@ -1,3 +1,4 @@
+import thread
 from websocket_server import WebsocketServer
 
 
@@ -14,6 +15,15 @@ def on_client_left(client, server):
 def on_message(client, server, message):
     print('Msg from Client {}: {}'.format(client['id'], message))
     server.send_message(client, 'I got message from client {}: {}'.format(client['id'], message))
+    # magic string for shutdown server :-)
+    if message.startswith('close-server'):
+        print('Server Bye Bye!!')
+        thread.start_new_thread(kill_server, (ws_server,))
+        print('Done.')
+
+
+def kill_server(server_handler):
+    server_handler.shutdown()
 
 
 ws_server = WebsocketServer(8888, host='127.0.0.1')
