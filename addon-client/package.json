@@ -1,0 +1,15 @@
+{
+  "title": "WebSocket Addon Demo",
+  "name": "ws-addon-client-demo",
+  "version": "0.0.1",
+  "description": "The WebSocket Addon Demo",
+  "main": "index.js",
+  "author": "Askeing",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
