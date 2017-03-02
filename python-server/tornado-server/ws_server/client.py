@@ -10,7 +10,7 @@ data = {
     'command': 'getfile',
     'data': file_path
 }
-print "Sending {} ...."
+print "Sending {} ....".format(data)
 ws.send(json.dumps(data))
 print "Sent"
 
@@ -22,7 +22,7 @@ data = {
     'command': 'getlink',
     'data': ''
 }
-print "Sending {} ...."
+print "Sending {} ....".format(data)
 ws.send(json.dumps(data))
 print "Sent"
 
